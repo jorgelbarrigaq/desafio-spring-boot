@@ -1,0 +1,45 @@
+# 🚀 Archivos y carpetas generados por Maven
+target/
+*.jar
+*.war
+*.ear
+
+# 🚀 Archivos de configuración del IDE (IntelliJ, Eclipse, VSCode)
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+
+# 🚀 Archivos del sistema operativo (Mac y Linux)
+.DS_Store
+Thumbs.db
+
+# 🚀 Archivos de logs y depuración
+logs/
+*.log
+hs_err_pid*
+heapdump.hprof
+
+# 🚀 Archivos de configuración sensibles (credenciales)
+application.properties
+application.yml
+.env
+*.env
+
+# 🚀 Base de datos en memoria (H2)
+*.mv.db
+*.h2.db
+
+# 🚀 Dependencias descargadas (para evitar incluirlas en el repositorio)
+.mvn/
+mvnw
+mvnw.cmd
+
+# 🚀 Archivos generados por OpenAPI Generator
+target/generated-sources/openapi/
+
+
