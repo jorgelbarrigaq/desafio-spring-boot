@@ -1,0 +1,152 @@
+{
+  "info": {
+    "_postman_id": "3980e00f-585c-4408-8b90-5acfbe2225c8",
+    "name": "POC Previred",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "15183678"
+  },
+  "item": [
+    {
+      "name": "Lista Tareas",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBudWV2by5jb20iLCJpYXQiOjE3NDE1NTczNjgsImV4cCI6MTc0MTU2MDk2OH0.2DN8G-xZclSyBv1TKfpLQBBIFDJ4vQ_styYaLIbyisI",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/tareas",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["tareas"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get TOKEN",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"admin@nuevo.com\",\"password\":\"admin123\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["auth", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crea Tarea",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBudWV2by5jb20iLCJpYXQiOjE3NDE1MzU3NDcsImV4cCI6MTc0MTUzOTM0N30.FUtlGtmSbS1HxxxZjx_RxA3TXg6hAPhLZgGBqMCcYTo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Finalizar reporte mensual\",\n  \"descripcion\": \"Revisar y completar el reporte de ventas\",\n  \"fechaVencimiento\": \"2025-03-15T23:59:59\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/tareas",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["tareas"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualiza Tarea",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBudWV2by5jb20iLCJpYXQiOjE3NDE1NTA3MTcsImV4cCI6MTc0MTU1NDMxN30.QY8jYwQZHMzDhLfKhBqCsh31LUVosqYtUdMF0EqBOPQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Actualizar reporte mensual\",\n  \"descripcion\": \"Agregar datos nuevos al reporte\",\n  \"fechaVencimiento\": \"2025-03-20T23:59:59\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/tareas/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["tareas", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Tarea",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBudWV2by5jb20iLCJpYXQiOjE3NDE1MzU5NzQsImV4cCI6MTc0MTUzOTU3NH0.4cT-fdFLhmtnWs2ETKUZdQIT5PcxumVmst32wrHNACk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/tareas/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["tareas", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
